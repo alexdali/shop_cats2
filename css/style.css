@@ -10,54 +10,50 @@ body {
 }
 
 .container {
+	display: flex;
+	flex-direction: column;
+	/*justify-content: center;*/
 	width: 95%;
+	height: 100%;
 	margin: 0 auto;
 }
 
 
 /** HEADER **/
 nav {
-	padding: 5px;
-	margin-top: 10px;
-	border-bottom: 2px solid grey;
+	display: flex;
+	flex-grow: 1;
+	/*width: 100%;*/
+	/*flex-basis: 70px;*/
+	height: 70px;
+	margin-top: 5px;
+	border-bottom: 1px solid grey;
 }
 
 .logo-brand {
-	display: inline-block;
-	width: 9em;
-	padding: 0;
-	margin-left: 0;
+	/*display: inline-block;*/
+	width: 19em;
+	padding: 20px 5px 5px;
+	margin: 0 auto;
 	text-align: center;
-	font-size: 1.5em;
-}
-
-.nav-switch-button {
-	display: inline-block;
-	margin-right: 1%;
-	border: 1px solid grey;
-	border-radius: 5px;
-	margin-left: 73.5%;
-	width: 5%;
-	padding: 2px 1px 0;
-	text-align: center;
-}
-.nav-switch-button > span {
-	display: block;
-}
-.cart > i {
-	vertical-align: middle;
+	font-size: 1.7em;
+	font-weight: bold;
 }
 
 /* END HEADER */
 
-/* CATALOG PAGE */
+/* MAIN */
 .catalog-content {
+	display: flex;
+	flex-grow: 3;
+	justify-content: space-between;
 	margin-top: 5px;
 	width: 100%;
 	background-color: #f5f7f4;
-	height: 100%;
+	height: calc(100vh - 170px);
 }
 
+/*
 h2 {
 	display: inline-block;
 	margin-left: 0;
@@ -95,11 +91,30 @@ h2 {
 	box-shadow: inset 0 12px 12px -12px rgba(201, 200, 200);	
 }
 
-.root-catalog {
+*/
+
+.list-col {
+	width: 15%;
 	padding: 1% .5%;
-	text-align: center;
+	/*text-align: center;*/
+	border: 1px solid grey;
 }
 
+.photo-col {
+	display: grid;
+	width: 65%;
+	padding: 1% .5%;
+	border: 1px solid grey;
+}
+
+.range-col {
+	width: 20;
+	padding: 1% .5%;
+	/*text-align: center;*/
+	border: 1px solid grey;	
+}
+
+/*
 .card-unit {
 	display: inline-block;
 }
@@ -218,30 +233,45 @@ h2 {
 [name^="shadow-"]:checked ~ .root-catalog .card-unit-content-li .card-unit-descript {
 	height: 100%;
 	max-height: 180px;
+}*/
+
+/* End MAIN */
+
+
+/* FOOTER */
+
+footer {
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+	/*width: 100%;*/
+	/*flex-basis: 70px;*/
+	height: 70px;
+	margin-top: 5px;
+	border: 1px solid grey;
 }
 
+/* End FOOTER */
 
 
-
-/* End CATALOG Page */
 
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
-	.card-unit {
+	/*.card-unit {
 		width: 22%;
 		height: 500px;
 		padding: 1% 1%;
-	}
+	}*/
 }
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
-	.card-unit {
+	/*.card-unit {
 		width: 28%;
 		height: 500px;
 		padding: 1% 1.5%;
-	}
+	}*/
  }
 
  /********* Small devices only *********/
