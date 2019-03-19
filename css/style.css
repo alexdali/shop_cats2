@@ -1,0 +1,272 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  color: #000;
+  background-color: #fff;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.container {
+	width: 95%;
+	margin: 0 auto;
+}
+
+
+/** HEADER **/
+nav {
+	padding: 5px;
+	margin-top: 10px;
+	border-bottom: 2px solid grey;
+}
+
+.logo-brand {
+	display: inline-block;
+	width: 9em;
+	padding: 0;
+	margin-left: 0;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.nav-switch-button {
+	display: inline-block;
+	margin-right: 1%;
+	border: 1px solid grey;
+	border-radius: 5px;
+	margin-left: 73.5%;
+	width: 5%;
+	padding: 2px 1px 0;
+	text-align: center;
+}
+.nav-switch-button > span {
+	display: block;
+}
+.cart > i {
+	vertical-align: middle;
+}
+
+/* END HEADER */
+
+/* CATALOG PAGE */
+.catalog-content {
+	margin-top: 5px;
+	width: 100%;
+	background-color: #f5f7f4;
+	height: 100%;
+}
+
+h2 {
+	display: inline-block;
+	margin-left: 0;
+}
+
+.desc-btn {
+	display: inline-block;
+	margin-left: 75%;
+}
+
+[name^="shadow-"] {
+    display: none;
+}
+
+[name^="shadow-"] ~ .button > .material-icons {
+    font-size: 2em;
+}
+
+.button > i {
+	font-size: 1.3em;
+	vertical-align: middle;
+}
+
+[name^="shadow-"]:checked ~ .button.tile .material-icons{
+    display: none;
+}
+
+[name^="shadow-"]:not(:checked) ~ .button.list .material-icons {
+    display: none;
+}
+
+.catalog-content hr {
+	height: 12px; 
+	border: 0; 
+	box-shadow: inset 0 12px 12px -12px rgba(201, 200, 200);	
+}
+
+.root-catalog {
+	padding: 1% .5%;
+	text-align: center;
+}
+
+.card-unit {
+	display: inline-block;
+}
+
+[name^="shadow-"]:checked ~ .root-catalog > .card-unit {
+	width: 100%;
+	height: 200px;
+	margin-bottom: 10px;
+	padding: 6px;
+}
+
+[name^="shadow-"]:checked ~ .root-catalog .card-unit-content-li {
+	display: inline-block;
+	width: 30%;
+	height: 200px;
+	padding: .5% 1% 0;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.card-unit > ul {
+	width: 100%;
+	height: 100%;
+}
+
+.card-unit-content {
+	line-height: 140%;
+	text-align: left;
+	overflow: hidden;
+}
+
+.card-unit-img {
+	line-height: 257px;
+}
+
+[name^="shadow-"]:checked ~ .root-catalog .card-unit-content-li > .card-unit-img {
+	line-height: 0;
+}
+
+.card-unit-img > img {
+	width: 100%;
+	height: auto;
+	max-height: 255px;
+	object-fit: contain;
+	vertical-align: bottom;
+}
+
+.card-unit:hover .card-unit-img > img, .card-unit-img > img:hover {
+	opacity: .7;
+}
+
+[name^="shadow-"]:checked ~ .root-catalog .card-unit-content-li > .card-unit-img > img {
+	max-height: 200px;
+}
+
+.card-unit-name {
+	width: 95%;
+	font-size: 1.4em;
+	letter-spacing: .08em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 4% 2% 1%;
+}
+
+[name^="shadow-"]:checked ~ .root-catalog .card-unit-content-li > .card-unit-name {
+	padding: .5% 2% 1%;	
+}
+
+.card-unit-category {
+	width: 100%;
+	font-size: .8em;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 0 2% 1%;	
+}
+
+.card-unit-name > a:hover, .card-unit-category > a:hover {
+    color: red; 
+   } 
+
+.card-unit-rating {
+	width: 90%;
+	padding: 0 2% 2%;
+	color: orange;
+}
+
+.card-unit-rating-wrapper .unit-rating {
+	display: inline-block;
+	width: 8%;
+}
+
+.card-unit-price {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: red;
+	padding: .5% 2% 2%;		
+}
+
+.card-unit-descript p:first-child {
+	width: 95%;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.card-unit-descript {
+	width: 95%;
+	height: 10em;
+	font-size: .7em;
+	line-height: 1.3em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: .5% 2%;
+}
+
+[name^="shadow-"]:checked ~ .root-catalog .card-unit-content-li .card-unit-descript {
+	height: 100%;
+	max-height: 180px;
+}
+
+
+
+
+/* End CATALOG Page */
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+	.card-unit {
+		width: 22%;
+		height: 500px;
+		padding: 1% 1%;
+	}
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+	.card-unit {
+		width: 28%;
+		height: 500px;
+		padding: 1% 1.5%;
+	}
+ }
+
+ /********* Small devices only *********/
+@media (min-width: 768px) and (max-width: 991px) {
+	.card-unit {
+		width: 40%;
+		height: 500px;
+		padding: 1%;
+	}
+}
+
+/********* Small devices only *********/
+@media (min-width: 600px) and (max-width: 767px) {
+	.card-unit {
+		width: 55%;
+		height: 500px;
+		padding: 1%;
+	}
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 599px) {
+	.card-unit {
+		width: 80%;
+		height: 500px;
+		padding: 2%;
+	}
+}
